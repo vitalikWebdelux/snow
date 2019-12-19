@@ -1,0 +1,95 @@
+.td-gallery
+	&__bg-text
+		&--ukr
+			position: relative	
+			&::before
+				content: 'ТЕХНОДІМ'
+				color: #f3f6f1
+				font-family: gb
+				font-size: 14rem
+				left: 0
+				line-height: 1
+				position: absolute	
+				top: 50%
+				z-index: -1
+				transform: translateY(-50%)
+				+mq(800px)
+					font-size: 7rem
+				+mq(480px)
+					display: none
+
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+
+	&__btn-wrap
+		display: flex
+
+	&__item
+		padding: 6px
+		margin: 0 -5px
+		flex-basis: calc(100% / 5 - 6px)
+		cursor: pointer
+
+		+mq(md)	
+			flex-basis: calc(100% / 2 - 6px)
+			display: flex
+			margin: 0 auto
+			display: flex
+			justify-content: center
+		+mq(480px)
+			flex-basis: 100%
+
+
+
+
+	&__hover-box
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		width: 101%
+		height: 100%
+		background-color: transparent
+		opacity: 0
+		display: flex
+		opacity: 0
+		flex-direction: column
+		align-items: center
+		justify-content: center
+
+
+
+	&__ail::before
+		content: '\e910'
+		font-size: 20px
+		font-family: ci
+
+	&__text
+		color: transparent
+		opacity: 0
+		font-size: 15px
+		font-family: gm
+
+	&__img-wrap
+		position: relative
+		margin: 0 auto
+		transition: all .7s ease
+		&:hover
+			.td-gallery__ail
+				font-size: 20px
+				
+				color: #fff
+
+			.td-gallery__text
+				color: $td-text-yellow
+				opacity: 1
+
+			.td-gallery__hover-box
+				opacity: 1
+				background: $td-gradient-yellow
+
+
+	

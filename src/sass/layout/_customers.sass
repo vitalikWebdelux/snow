@@ -1,0 +1,114 @@
+.customers
+    display: flex
+    align-items: flex-end
+    margin-bottom: 10rem
+    +mq(lg)
+        display: block
+
+    &__title
+        // padding-right: 100px
+        position: relative
+        flex: 0 0 30%
+        max-width: 30%
+        +mq(lg)
+            flex: 0 0 100%
+            max-width: 100%
+            text-align: center
+            margin-bottom: 3rem
+
+        &::before
+            content: '.....'
+            position: absolute
+            font-size: 3rem
+            color: #bdb5b6
+            letter-spacing: 3px
+            top: 25px
+            transform: rotate(90deg)
+            right: 20px
+            +mq(lg)
+                transform: rotate(0deg)
+                right: 50%
+                bottom: -2rem
+                top: auto
+                margin-right: -24px
+
+        h2
+            font-size: 4rem
+            line-height: 3.5rem
+            font-family: gl
+            +mq(1200px)
+                font-size: 3rem
+            span
+                background: -webkit-gradient(linear,left top,right top,from(#f48a38),to(#f2d325))
+                background: linear-gradient(to right,#f48a38 0,#f2d325 100%)
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+                font-family: gm
+    
+    &__slider
+        // overflow: hidden
+        position: relative
+        flex: 0 0 70%
+        max-width: 70%
+        +mq(lg)
+            flex: 0 0 100%
+            max-width: 100%
+
+        &-wrap
+            overflow: hidden
+
+        .customers_slider-prev
+            height: 21px
+            width: 35px
+            background-image: url(../img/arrow.png)
+            background-repeat: no-repeat
+            position: absolute
+            bottom: -50px
+            left: 0px
+            cursor: pointer
+            transform: rotate(180deg)
+            background-size: cover
+           
+        .customers_slider-next
+            height: 21px
+            width: 35px
+            background-image: url(../img/arrow.png)
+            background-repeat: no-repeat
+            position: absolute
+            bottom: -50px
+            left: 60px
+            cursor: pointer
+            background-size: cover
+
+        .customers-dots
+            display: flex !important
+            position: absolute
+            right: 0
+            bottom: -50px
+
+            button  
+                display: none
+            
+            li
+                width: 7px
+                height: 7px
+                background: #dedcde
+                border-radius: 50%
+                margin-left: 9px
+                cursor: pointer
+                &.slick-active
+                    background: #f3b52d
+
+    &-slide
+        text-align: center
+        margin-right: 75px
+
+        img
+            display: inline-block
+            // max-height: 120px
+            filter: grayscale(100%)
+            transition: 0.2s
+            height: 55px
+
+            &:hover
+                filter: grayscale(0%)

@@ -1,0 +1,63 @@
+.td-card
+	margin-bottom: 100px
+	border-radius: 4px
+	&__container
+		background: $td-gradient-yellow
+		position: relative
+		
+	&__bg-text
+		&--ukr, &--ru
+			position: relative	
+			z-index: 0
+			&::before
+				content: 'ТЕХНОДІМ'
+				font-family: gb
+				font-size: 9.85rem
+				background: linear-gradient(to right, #ff9d33 0%, $td-text-orange 100%)
+				-webkit-background-clip: text
+				-webkit-text-fill-color: transparent
+				right: 0
+				line-height: 1
+				position: absolute	
+				top: 50%
+				z-index: -11
+				transform: translateY(-50%)
+				+mq(800px)
+					font-size: 7rem
+				+mq(480px)
+					display: none
+
+
+		&--ru
+			&::before
+				content: 'ТЕХНОДОМ'
+
+	&__subtitle
+		font-size: 24px
+		font-family: g
+		text-align: right
+		line-height: 1
+		padding-bottom: 4rem
+		+mq(lg)
+			font-size: 19px
+		+mq(sm)
+			
+	
+
+
+	&__img-wrap
+		position: relative
+		top: 100px
+		+minq(1500px)
+			right: -50px
+		+mq(577px)
+			margin-top: -60px
+
+	&__btn-wrap
+		display: flex
+		justify-content: flex-end
+
+
+	&__overflow
+		padding-left: 15px
+

@@ -1,0 +1,147 @@
+.td-goods
+	margin-top: 60px
+	&__list
+		background-color: #fff
+		padding-left: 15rem
+		+mq(xl)
+			padding-left: 15px
+	&__item
+		padding-bottom: 7rem
+	&__bg-text
+		&--ukr
+			position: relative	
+			&::before
+				content: 'ТЕХНОДІМ'
+				color: #f3f6f1
+				font-family: gb
+				font-size: 14rem
+				right: 0
+				line-height: 1
+				position: absolute	
+				top: 50%
+				z-index: -2
+				transform: translateY(-50%)
+				+mq(800px)
+					font-size: 7rem
+				+mq(480px)
+					display: none
+
+	&__name
+		padding-bottom: 60px
+		line-height: 1
+		font-size: 30px
+		+mq(lg)
+			font-size: 19px
+			padding-bottom: 5px
+		+mq(md)
+			padding-top: 30px
+
+	.td-goods__features 
+		list-style: none
+		margin: 0
+		padding: 0
+		padding: 60px 0
+		position: relative
+		+mq(lg)
+			padding: 30px 0
+
+		&::before, &::after
+			content: '. . . . . .'
+			line-height: 1
+			font-size: 2.6rem
+			color: $td-text-opacity
+			position: absolute
+			left: 0
+			+mq(sm)
+				font-size: 1.9rem
+
+		&::before
+			top: 0
+
+		&::after
+			bottom: 0
+
+	&__feature
+		padding-left: 40px
+		position: relative
+		line-height: 40px
+		font-family: g
+		padding-right: 10px
+		min-width: 49%
+		display: inline-block
+		font-size: 17px
+
+		+mq(lg)
+			font-size: 12px
+		+mq(380px)
+			min-width: 100%
+
+		&::before
+			content: ''
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			background: url(../img/checkbox.png) no-repeat
+			background-size: contain
+			width: 25px
+			height: 25px
+			left: 0
+
+	&__price-wrap
+		
+		
+	&__interface
+		align-items: flex-end
+		display: flex
+		margin-top: auto
+		padding-top: 10px
+		+mq(sm)
+			flex-wrap: wrap
+
+	&__overlay
+		height: 100%
+		display: flex
+		flex-direction: column
+
+
+	&__price
+		font-family: g
+		font-size: 16px
+		color: #606060
+		padding-right: 40px
+		position: relative
+		margin-right: 40px
+		+mq(lg)
+			padding-right: 18px
+			margin-right: 18px
+		+mq(sm)
+			padding-bottom: 20px
+
+		&::before
+			content: '. . . . .'
+			font-size: 2.6rem
+			color: $td-text-opacity
+			position: absolute
+			line-height: 1
+			right: -20px
+			top: 50%
+			transform: translateY(-50%) rotate(-90deg)
+			@media screen and (max-width: 810px) and (min-width: 768px)
+				display: none
+
+			+mq(sm)
+				display: none
+
+		span
+			color: $td-black-text
+			font-size: 45px
+
+		sup
+			font-family: gm
+			font-size: 20px
+			color: #cdcdcd
+
+		
+	&__img-wrap
+		+mq(md)
+			text-align: center

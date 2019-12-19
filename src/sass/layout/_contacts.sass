@@ -1,0 +1,99 @@
+.td-contacts
+	
+	background-color: $td-bg-grey
+	
+	&__list
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		padding:  9rem 0
+
+	&__item
+		flex: 0 0 50%
+		padding: 10px
+		padding-bottom: 30px
+		+mq(sm)
+			flex-basis: 100%
+
+
+	&__adress, &__number, &__email
+		padding-left: 50px
+		position: relative	
+
+		a
+			color: $td-black-text 
+			font-family: g
+			font-size: 16px
+
+		span
+			font-size: 14px
+			color: darken($td-text-opacity, 10%)
+			
+		&:first-child
+			&::before
+				font-family: ci
+				font-size: 27px
+				position: absolute
+				background: $td-gradient-yellow
+				-webkit-background-clip: text
+				-webkit-text-fill-color: transparent
+				top: 0
+				left: 0
+
+	&__number
+		&:first-child
+			&::before 
+				content: '\e911'
+
+	&__adress
+		color: $td-black-text 
+		font-family: g
+		font-size: 16px
+		&:first-child
+			&::before 
+				content: '\e90d'
+
+	&__email
+		font-family: g
+		font-size: 16px
+		color: $td-black-text 
+		&:first-child
+			&::before 
+				content: '\e907'
+				font-size: 20px
+	&__social-net
+		font-size: 24px
+		color: #262b35
+		padding-top: 15px
+		font-family: g
+		li
+			display: inline-block
+
+
+
+	&__viber, &__telegram, &__watsup
+		a
+			position: relative
+			&::before
+				font-size: 30px
+				font-family: ci
+
+	&__viber a::before
+		content: '\e90b'
+		
+		color: $td-text-purpure
+
+	&__telegram a::before
+		content: '\e909'
+		color: $td-text-bluewhite
+
+	&__watsup a::before
+		content: '\e90c'
+		color: $td-text-green
+
+
+#td-map
+	width: 100%
+	height: 100%
+	+mq(lg)
+		height: 350px

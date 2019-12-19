@@ -1,0 +1,179 @@
+.header
+    background: $td-darkblue
+    padding: 25px 0
+    position: relative
+    +mq(lg)
+        padding-right: 55px
+    +mq(md)
+        padding: 10px 55px 10px 0
+
+    &__logo
+        align-items: center
+        display: flex
+
+    &__partner
+        justify-content: center
+        align-items: center
+        display: flex
+        +mq(lg)
+            display: none
+
+    &__loc
+        display: flex
+        align-items: center
+        justify-content: center
+
+        +mq(md)
+            display: none
+
+        a 
+            color: $td-grey-text
+            font-size: 1.4rem
+
+            &:hover
+                text-decoration: none
+
+
+        &::before
+            content: '\e90d'
+            font-family: ci
+            display: inline-block
+            font-size: 27px
+            background: -webkit-gradient(linear,left top,right top,from(#f48a38),to(#f2d325))
+            background: linear-gradient(to right,#f48a38 0,#f2d325 100%)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            margin-right: 1rem
+
+    &__contacts
+        display: flex
+        align-items: center
+        justify-content: center
+        +mq(md)
+            display: none
+
+        a 
+            color: $td-grey-text
+            font-size: 1.4rem
+
+            &:hover
+                text-decoration: none
+
+            span
+                color: #ffffff
+                font-size: 1.6rem
+                font-family: gm
+
+        &::before
+            content: '\e911'
+            font-family: ci
+            display: inline-block
+            font-size: 27px
+            background: -webkit-gradient(linear,left top,right top,from(#f48a38),to(#f2d325))
+            background: linear-gradient(to right,#f48a38 0,#f2d325 100%)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            margin-right: 1rem
+
+    &__soc
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        +mq(lg)
+            padding: 0
+            flex-grow: 0
+
+        a   
+            margin: 0 7px
+
+        .facebook-icon
+            &::before
+                content: '\e914'
+                font-family: ci
+                font-size: 3.2rem
+                color: #3b3a4b
+                +mq(md)
+                    font-size: 2.5rem
+        .inst-icon
+            &::before
+                content: '\e913'
+                font-family: ci
+                font-size: 3.2rem
+                color: #3b3a4b
+                +mq(md)
+                    font-size: 2.5rem
+    &__menu
+        background: #fafafa
+        +mq(lg)
+            display: none
+
+
+        
+.hero
+    min-height: calc( 100vh -  170px)
+    // background-image: url(../img/hero-bg.jpg)
+    position: relative
+
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        z-index: 2
+        background: rgba(0, 0, 0, 0.5)
+
+    &__video
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+.exchange
+    position: absolute
+    right: 0
+    bottom: 100px
+    z-index: 5
+    color: #ffffff
+    
+    &__title
+        padding: 1.8rem
+        padding-left: 3rem
+        position: relative 
+        background-image: linear-gradient(to right, #fff 20%, rgba(255, 255, 255, 0) 0%)
+        background-position: bottom
+        background-size: 10px 2px
+        background-repeat: repeat-x
+        
+        // &::before
+        //     content: ''
+        //     font: 1.4rem gl
+        //     position: absolute
+        //     border-bottom: 1px dotted #ffffff
+            
+        //     height: 2px
+        //     width: 100%
+        //     bottom: 0
+        //     left: 0
+
+        h3
+            font: 1.4rem gl
+
+            span 
+                margin-left: 30px
+    
+    &__currency
+        font: 1.8rem gb
+        padding: 1.8rem
+        padding-left: 3rem
+
+    
+    &__price
+        font: 1.8rem gb
+        padding: 1.8rem
+        padding-left: 3rem
+        background: rgba(255, 255, 255, 0.2)

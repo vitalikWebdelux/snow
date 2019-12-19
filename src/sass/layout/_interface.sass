@@ -1,0 +1,24 @@
+.td-interface
+	padding-top: 27px
+	padding-bottom: 90px
+	&__bg-text
+		&--ukr
+			position: relative	
+			z-index: 0
+			&::before
+				content: 'ТЕХНОДІМ'
+				font-family: gb
+				font-size: 10.85rem
+				color: $td-text-opacity
+				opacity: 0.6
+				right: 0
+				line-height: 1
+				position: absolute	
+				top: 50%
+				z-index: -11
+				transform: translateY(-50%)
+				+mq(xl)
+					font-size: 6.85rem
+				+mq(480px)
+					display: none
+	&__btn-wrap

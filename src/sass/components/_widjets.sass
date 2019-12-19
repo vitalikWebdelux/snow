@@ -1,0 +1,88 @@
+#td-scroller
+	position: fixed
+	right: 0
+	bottom: 2rem
+	height: 6rem
+	width: 6rem
+	color: #fff
+	font-size: 3rem
+	line-height: 3rem
+	display: inline-block
+	background-color: #fff
+	text-align: center
+	transform: translateX(4rem)
+	opacity: 0
+	box-shadow: 0px 20px 30px 0px rgba(52, 23, 9, 0.17)
+	z-index: 900
+	transition: all .5s ease
+	
+	+mq(sm)
+		width: 45px
+		height: 45px
+
+
+	&::before
+		content: '\e905'
+		display: inline-block
+		font: 20px/1 ci
+		position: absolute
+		top: 50%
+		background: linear-gradient(to right,#f48a38 0,#f2d325 100%)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		left: 50%
+		transform: translate(-50%, -50%) rotate(-90deg)
+
+		+mq(sm)
+			font-size: 0.9rem
+
+#td-scroller.td-show
+	transform: translateX(-3rem)
+	opacity: 1
+	
+	+mq(sm)
+		transform: translateX(-1rem)
+
+#td-widjet-phone
+	position: fixed
+	left: 0
+	bottom: 2rem
+	height: 6rem
+	width: 6rem
+	color: #fff
+	font-size: 3rem
+	line-height: 3rem
+	display: inline-block
+	background-color: #fff
+	text-align: center
+	transform: translateX(-4rem)
+	box-shadow: 0px 20px 30px 0px rgba(52, 23, 9, 0.17)
+	z-index: 900
+	opacity: 0
+	transition: all .5s ease
+
+	+mq(sm)
+		width: 45px
+		height: 45px
+
+	&::before
+		content: '\e911'
+		position: absolute
+		top: 50%
+		left: 50%
+		font: 30px/1 ci
+		transform: translate(-50%, -50%) 
+		background: linear-gradient(to right,#f48a38 0,#f2d325 100%)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+
+#td-widjet-phone.td-show
+	transform: translateX(3rem)
+	opacity: 1
+	
+	+mq(sm)
+		font-size: 2rem
+		transform: translateX(1rem)
+#td-widjet-phone.td-show-top, #td-scroller.td-show-top, #td-scroller.td-pusk-top
+	bottom: 11rem
+

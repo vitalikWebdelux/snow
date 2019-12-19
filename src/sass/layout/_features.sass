@@ -1,0 +1,217 @@
+.td-features
+	&__container
+		padding-top: 80px
+		background-color: #fff
+		box-shadow: 0px 50px 60px 0px rgba(0, 0, 0, 0.05)
+		margin-bottom: 60px
+		position: relative
+		margin-top: -76px
+		margin-bottom: 76px
+		z-index: 111
+
+	&__body
+		display: flex
+		justify-content: space-between
+		padding: 60px 0
+		// margin-top: 20px
+		// margin-bottom: 42px
+		position: relative
+		+mq(sm)
+			flex-direction: column
+			padding: 30px	0
+
+		&::before, &::after
+			content: '. . . . . .'
+			font-size: 2.6rem
+			color: $td-text-opacity
+			position: absolute
+			line-height: 1
+			left: 0
+
+		&::before
+			top: 0
+
+		&::after               
+			bottom: 0
+
+	&__bg-text
+		&--ukr
+			position: relative	
+			&::before
+				content: 'ТЕХНОДІМ'
+				color: $td-text-opacity
+				font-family: gb
+				font-size: 14rem
+				left: -103px
+				line-height: 1
+				position: absolute	
+				top: 50%
+				z-index: -1
+				opacity: 0.2
+				transform: translateY(-50%)
+				+mq(800px)
+					font-size: 7rem
+				+mq(480px)
+					display: none
+
+	&__overlay
+		overflow: hidden
+		padding-left: 70px
+		margin-left: -15px
+		+mq(xl)
+			padding-left: 40px
+		+mq(lg)
+			margin-left: 0
+			padding-left: 15px
+
+	&__item
+		padding: 0 
+		padding-left: 60px
+		flex-basis: calc(100% / 2 - 12px)
+		position: relative	
+		z-index: 4
+		&:first-child
+			+mq(sm)
+				padding-bottom: 20px
+	
+	&__img-wrap
+		// position: relative
+	&__img
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: 0
+		width: 387px
+		height: 460px
+		background: url(../img/director.png) no-repeat
+		background-size: contain
+		+minq(1500px)
+			width: 526px
+			height: 700px
+			right: -58px
+			transform: translateY(0)
+			top: -54px
+		+mq(xl)
+			width: 326px
+			height: 500px
+		+mq(lg)
+			display: none
+
+	&__name
+		font-size: 20px
+		font-family: gb
+		color: #1b1f28
+		padding-bottom: 3px
+		+mq(md)
+			font-size: 17px
+
+	&__deskription
+		color: #848484
+		font-family: g
+		font-size: 18px
+		+mq(md)
+			font-size: 13px
+		
+	&__calendar, &__dollar
+		
+		&::before
+			content: '\e902'
+			font-size: 40px
+			font-family: ci
+			position: absolute	
+			background: $td-gradient-yellow
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			top: 0
+			left: 0	
+
+	&__calendar
+		&::before
+			content: '\e912'
+			background: $td-gradient-yellow
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+
+		&::after
+			content: ''
+
+	&__blockquote
+		padding-left: 35px
+
+	&__blockquote-wpap
+		display: flex
+		blockquote
+			align-self: flex-end
+			font-size: 1.3rem
+			font-family: g
+			color: #848484
+			padding-left: 30px
+			font-style: italic
+			position: relative
+			b
+				position: absolute
+				top: 0
+				left: 0
+				opacity: .3
+				line-height: 1
+				// transform: rotate(180deg)
+				font-size: 46px
+			span
+				color: #fd8332
+
+
+	&__footer
+		display: flex
+		margin-top: 20px
+		padding-bottom: 82px
+		position: relative
+		blockquote
+			text-align: right
+		+mq(sm)
+			flex-wrap: wrap
+		&::before
+			content: ''
+			background: url(../img/signature.jpg) no-repeat
+			background-size: contain
+			width: 116px
+			height: 121px
+			position: absolute
+			right: 1%
+			bottom: -24px
+			+mq(md)
+				height: 101px
+			+minq(1500px)
+				right: 15%
+	
+	&__direktor
+		font-size: 25px
+		color: #1b1f28
+		font-family: gb
+		+mq(md)
+			font-size: 19px
+
+
+	&__element
+		max-width: 342px
+		position: relative
+		&:nth-child(2)
+			margin-left: 50px
+			padding-left: 50px
+			&::before
+				content: '. . . . .'
+				font-size: 2.6rem
+				color: $td-text-opacity
+				position: absolute
+				left: -38px
+				line-height: 1
+				top: 50%
+				transform: translateY(-50%) rotate(-90deg)
+				+mq(sm)
+					content: none
+			+mq(md)
+				margin-left: 20px
+				padding-left: 20px
+			+mq(sm)
+				margin-left: 0
+		+mq(480px)
+			display: block

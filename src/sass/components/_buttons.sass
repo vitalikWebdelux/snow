@@ -1,0 +1,176 @@
+.td-button
+  display: inline-block
+  text-align: center
+  height: 6rem
+  padding: 0 3rem
+  color: $white
+  font: 1.8rem/6rem gm, sans-serif
+  background-size: cover
+  background-repeat: no-repeat
+  background-color: transparent
+  border: 0
+  max-width: 24rem
+  width: 100%
+  white-space: nowrap
+  line-height: 1
+  user-select: none
+  cursor: pointer
+  transition: color .25s, box-shadow .25s, background-color .25s
+  position: relative
+  background-size: 200% 100%
+  background-position: center
+  transition: background .5s, box-shadow .5s
+  border-radius: 6px
+
+  &:focus
+    outline: none
+  &:active,
+  &:visited,
+  &:hover,
+  &:link
+    // color: $text-color
+    text-decoration: none
+  &:hover
+    color: #fff
+    background: $td-gradient-yellow
+    &::after
+      color: #fff
+      -webkit-text-fill-color: #fff
+
+  &--goods
+    border: 1px solid #eeeeee
+    color: #737373
+    padding-right: 87px
+    font-family: g
+    max-width: 28rem
+    &::after
+      content: '\e905'
+      font-family: ci
+      font-size: 20px
+      background: $td-gradient-yellow
+      right: 34px
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      position: absolute
+      +mq(lg)
+        font-size: 15px
+      @media screen and (max-width: 810px) and (min-width: 768px)  
+        display: none
+
+
+
+
+
+    +mq(lg)
+      font-size: 17px
+      padding-right: 57px
+      padding-left: 10px
+
+    @media screen and (max-width: 810px) and (min-width: 768px)  
+      max-width: 18rem
+
+    &:hover
+      color: #fff
+
+  &--gallery
+    color: #737373
+    font-family: g
+    padding: 0 0.58rem
+    border: 1px solid #eeeeee
+    margin: 54px auto
+    position: relative
+
+  &--news
+    background-color: #fff
+    color: #737373
+    margin: 60px 0
+
+  &--card
+    background: linear-gradient(to right, #f2d325 0,#f48a38 100%)
+    color: #fff
+    font-size: 1.7rem
+    max-width: 20rem
+    box-shadow: 0px 40px 30px 0px rgba(52, 23, 9, 0.09)
+    height: 6rem
+    @media screen and (max-width: 992px) and (min-width: 576px)
+      margin-bottom: 50px
+
+  &--interface
+    font-size: 1.7rem
+    font-family: gm
+    background: linear-gradient(to right, #f2d325 0,#f48a38 100%)
+    padding-left: 68px
+    position: relative
+    max-width: 30rem
+    &::before
+      content: '\e90e'
+      font-size: 33px
+      font-family: ci
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      left: 23px
+      background: $td-text-orange
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+    &:first-child
+      max-width: 24rem
+      margin-right: 30px
+      line-height: 1
+      background: linear-gradient(to right, #f2d325 0,#f48a38 100%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      border: 2px solid $td-text-opacity
+      margin-bottom: 30px
+      &::before
+        content: '\e90f'
+        background: $td-text-opacity
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+
+
+
+@keyframes ch-pulse
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(.98)
+  100%
+    transform: scale(1)
+
+@keyframes move
+  0%
+    transform: translateX(-100px) skewX(-15deg) scaleX(1)
+    opacity: 0
+  15%
+    opacity: 0
+  48%
+    opacity: 1
+
+  80%
+    opacity: 0
+  100%
+    transform: translateX(330px) skewX(-15deg) scaleX(1)
+
+@keyframes jittery
+  5%,
+  50%
+    transform: scale(1)
+  10%
+    transform: scale(0.95)
+  15%
+    transform: scale(1.05)
+  20%
+    transform: scale(1.05) rotate(-5deg)
+  25%
+    transform: scale(1.05) rotate(5deg)
+  30%
+    transform: scale(1.05) rotate(-3deg)
+  35%
+    transform: scale(1.05) rotate(2deg)
+  40%
+    transform: scale(1.05) rotate(0)
+
+@keyframes heartbeat
+  50%
+    transform: scale(1.05)
